@@ -1,0 +1,34 @@
+.container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.wrapper {
+    padding: 24px;
+}
+
+.song-title {
+    position: absolute;
+    padding: 15px 8px;
+    color: #fff;
+}
+
+.music-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.prev-btn,
+.play-btn,
+.next-btn {
+    display: flex;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        opacity: 0.3;
+    }
+}

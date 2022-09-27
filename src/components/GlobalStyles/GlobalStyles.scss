@@ -1,0 +1,39 @@
+@import 'normalize.css';
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap);
+
+:root {
+    --default-font: 'Roboto', sans-serif;
+    --color-primary: rgb(243, 169, 82);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--default-font);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}

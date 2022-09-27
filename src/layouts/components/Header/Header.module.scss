@@ -1,0 +1,87 @@
+.container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.cover-container {
+    background-image: linear-gradient(180deg, rgba(66, 65, 65, 0.6), transparent);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+
+    .logo {
+        display: flex;
+        height: 100px;
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+    }
+}
+
+.switch-btn {
+    display: flex;
+    align-items: center;
+
+    padding: 4px 6px;
+    border-radius: 999px;
+    gap: 6px;
+
+    .switch-handler {
+        width: 24px;
+        height: 24px;
+        background-color: white;
+        border-radius: 999px;
+    }
+
+    .switch-inner {
+        display: flex;
+    }
+}
+
+.day-btn {
+    background-color: var(--color-primary);
+}
+
+.night-btn {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.login-btn {
+    padding: 5px 16px;
+    line-height: 22px;
+    border-radius: 8px;
+
+    font-family: var(--default-font);
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.share-icon,
+.fullscreen-icon,
+.menu-icon {
+    display: flex;
+    padding: 4px;
+    margin: -4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        opacity: 0.4;
+    }
+}
