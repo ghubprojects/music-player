@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Footer.module.scss';
 import { useStore } from '~/hooks';
 import { actions } from '~/store';
+import { songsData } from '~/data';
 import { NextIcon, PlayIcon, PrevIcon, StopIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
@@ -18,7 +19,7 @@ function Footer() {
     return (
         <footer className={cx('container')}>
             <div className={cx('wrapper')}>
-                <div className={cx('song-title')}>Song name: Ghibli</div>
+                <div className={cx('song-title')}>Song name: {songsData[state.songId].name}</div>
                 <div className={cx('music-player')}>
                     <div className={cx('prev-btn')} onClick={handlePrevSong}>
                         <PrevIcon />

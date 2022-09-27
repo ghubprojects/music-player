@@ -15,7 +15,7 @@ function ShareModal() {
 
     const handleHideModal = () => dispatch(actions.showModal(false));
 
-    const url = 'https://app.lofi.co?s=aG9ub2x1bHUmMCYwMDA1MCY=';
+    const url = 'https://relaxing-with-music.vercel.app/';
     const handleCopyUrl = () => {
         navigator.clipboard.writeText(url);
         setCopied(true);
@@ -35,13 +35,13 @@ function ShareModal() {
                     friends!
                 </p>
 
-                <div className={cx('share-link', copied ? 'copy-link-success' : undefined)}>
+                <div className={cx('share-link', copied && 'copy-link-success')}>
                     <input value={url} className={cx('link')} readOnly />
-                    {copied ? (
+                    {copied && (
                         <span className={cx('tick-icon')}>
                             <TickIcon />
                         </span>
-                    ) : undefined}
+                    )}
                 </div>
 
                 <button className={cx('copy-btn')} onClick={handleCopyUrl}>

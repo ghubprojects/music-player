@@ -1,21 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
 import { useStore } from '~/hooks';
-import audios from '~/assets/audios';
+import { songsData } from '~/data';
 
 function Audio({ className, ...restProps }) {
     // eslint-disable-next-line no-unused-vars
     const [state, dispatch] = useStore();
     const audioRef = useRef();
-
-    const songsList = Object.values(audios);
-    const [songUrl, setSongUrl] = useState(songsList[0]);
+    const [songUrl, setSongUrl] = useState(songsData[state.songId].src);
 
     useEffect(() => {
         state.playMusic ? audioRef.current.play() : audioRef.current.pause();
     }, [state.playMusic]);
 
     useEffect(() => {
-        setSongUrl(songsList[state.songId]);
+        setSongUrl(songsData[state.songId].src);
         audioRef.current.autoplay = state.playMusic;
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.songId]);

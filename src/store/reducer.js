@@ -1,7 +1,7 @@
 import { TOGGLE_THEME, SHOW_MODAL, PLAY_MUSIC, PREV_MUSIC, NEXT_MUSIC } from './constants';
-import audios from '~/assets/audios';
+import { songsData } from '~/data';
 
-const lastSongId = Object.keys(audios).length - 1;
+const lastSongId = songsData.length - 1;
 
 const initState = {
     nightTheme: true,

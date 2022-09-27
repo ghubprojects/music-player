@@ -41,15 +41,11 @@ function Header() {
                         className={cx('switch-btn', state.nightTheme ? 'night-btn' : 'day-btn')}
                         onClick={handleChangeTheme}
                     >
-                        {state.nightTheme ? (
-                            <div className={cx('switch-handler')}></div>
-                        ) : undefined}
+                        {state.nightTheme && <div className={cx('switch-handler')}></div>}
                         <div className={cx('switch-inner')}>
                             {state.nightTheme ? <NightIcon /> : <DayIcon />}
                         </div>
-                        {state.nightTheme ? undefined : (
-                            <div className={cx('switch-handler')}></div>
-                        )}
+                        {state.nightTheme || <div className={cx('switch-handler')}></div>}
                     </button>
 
                     <Link to='/signin' className={cx('login-btn')}>
