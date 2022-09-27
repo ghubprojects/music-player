@@ -8,6 +8,7 @@ import { actions } from '~/store';
 
 import images from '~/assets/images';
 import Image from '~/components/Image';
+import Clock from '~/components/Clock';
 import { DayIcon, FullscreenIcon, MenuIcon, NightIcon, ShareIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
@@ -37,6 +38,8 @@ function Header() {
                     <Image src={images.logo} className={cx('logo')} alt='logo' />
                 </Link>
                 <div className={cx('actions')}>
+                    <Clock />
+
                     <button
                         className={cx('switch-btn', state.nightTheme ? 'night-btn' : 'day-btn')}
                         onClick={handleChangeTheme}
