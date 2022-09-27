@@ -4,6 +4,7 @@ import Footer from '~/layouts/components/Footer';
 import ShareModal from '~/components/ShareModal';
 
 function DefaultLayout({ children }) {
+    // eslint-disable-next-line no-unused-vars
     const [state, dispatch] = useStore();
 
     return (

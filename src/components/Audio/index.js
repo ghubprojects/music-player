@@ -3,6 +3,7 @@ import { useStore } from '~/hooks';
 import audios from '~/assets/audios';
 
 function Audio({ className, ...restProps }) {
+    // eslint-disable-next-line no-unused-vars
     const [state, dispatch] = useStore();
     const audioRef = useRef();
 

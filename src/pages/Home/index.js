@@ -9,6 +9,7 @@ import Audio from '~/components/Audio';
 const cx = classNames.bind(styles);
 
 function Home() {
+    // eslint-disable-next-line no-unused-vars
     const [state, dispatch] = useStore();
 
     return (

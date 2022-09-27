@@ -9,6 +9,7 @@ import { CloseIcon, TickIcon } from '~/components/Icons';
 const cx = classNames.bind(styles);
 
 function ShareModal() {
+    // eslint-disable-next-line no-unused-vars
     const [state, dispatch] = useStore();
     const [copied, setCopied] = useState(false);
 
