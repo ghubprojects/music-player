@@ -9,18 +9,35 @@ import { actions } from '~/store';
 import images from '~/assets/images';
 import Image from '~/components/Image';
 import Clock from '~/components/Clock';
-import { DayIcon, FullscreenIcon, MenuIcon, NightIcon, ShareIcon } from '~/components/Icons';
+import DayNightSwitch from '~/components/DayNightSwitch';
+import Menu from '~/components/Menu';
+import {
+    FullscreenIcon,
+    InfoIcon,
+    MenuIcon,
+    MessageIcon,
+    PlaylistIcon,
+    ProfileIcon,
+    SettingIcon,
+    ShareIcon,
+} from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
+const menuOptions = [
+    { icon: <ProfileIcon />, title: 'Login' },
+    { icon: <SettingIcon />, title: 'Settings' },
+    { icon: <MessageIcon />, title: 'Contact' },
+    { icon: <PlaylistIcon />, title: 'How it works' },
+    { icon: <InfoIcon />, title: 'About us' },
+];
+
 function Header() {
     const [state, dispatch] = useStore();
-    console.log(state);
-
     const [fullscreen, setFullscreen] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
 
-    const handleChangeTheme = () => dispatch(actions.toggleTheme());
-
+    const handleShowModal = () => dispatch(actions.showModal(true));
     const handleFullscreen = () => {
         if (!fullscreen) {
             document.documentElement.requestFullscreen();
@@ -31,8 +48,6 @@ function Header() {
         }
     };
 
-    const handleShowModal = () => dispatch(actions.showModal(true));
-
     return (
         <header className={cx('container', state.nightTheme || 'cover-container')}>
             <div className={cx('wrapper')}>
@@ -41,17 +56,7 @@ function Header() {
                 </Link>
                 <div className={cx('actions')}>
                     <Clock />
-
-                    <button
-                        className={cx('switch-btn', state.nightTheme ? 'night-btn' : 'day-btn')}
-                        onClick={handleChangeTheme}
-                    >
-                        {state.nightTheme || <div className={cx('switch-handler')}></div>}
-                        <div className={cx('switch-inner')}>
-                            {state.nightTheme ? <NightIcon /> : <DayIcon />}
-                        </div>
-                        {state.nightTheme && <div className={cx('switch-handler')}></div>}
-                    </button>
+                    <DayNightSwitch />
 
                     <Link to='/signin' className={cx('login-btn')}>
                         Sign up
@@ -65,9 +70,12 @@ function Header() {
                         <FullscreenIcon />
                     </span>
 
-                    <span className={cx('menu-icon')} onClick={() => alert('menu-btn is clicked!')}>
-                        <MenuIcon />
-                    </span>
+                    <div className={cx('menu')}>
+                        <span className={cx('menu-icon')} onClick={() => setShowMenu(!showMenu)}>
+                            <MenuIcon />
+                        </span>
+                        {showMenu && <Menu list={menuOptions} />}
+                    </div>
                 </div>
             </div>
         </header>
