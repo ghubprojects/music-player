@@ -4,7 +4,7 @@ import { songsData } from '~/data';
 const lastSongId = songsData.length - 1;
 
 const initState = {
-    nightTheme: true,
+    nightTheme: new Date().getHours() < 18 ? false : true,
     showModal: false,
     playMusic: false,
     songId: 0,

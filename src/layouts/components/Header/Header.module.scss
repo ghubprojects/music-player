@@ -32,7 +32,7 @@
 
     padding: 4px 6px;
     border-radius: 999px;
-    gap: 6px;
+    gap: 4px;
 
     .switch-handler {
         width: 24px;
@@ -43,6 +43,7 @@
 
     .switch-inner {
         display: flex;
+        margin: 0 2px;
     }
 }
 

@@ -15,6 +15,8 @@ const cx = classNames.bind(styles);
 
 function Header() {
     const [state, dispatch] = useStore();
+    console.log(state);
+
     const [fullscreen, setFullscreen] = useState(false);
 
     const handleChangeTheme = () => dispatch(actions.toggleTheme());
@@ -32,7 +34,7 @@ function Header() {
     const handleShowModal = () => dispatch(actions.showModal(true));
 
     return (
-        <header className={cx('container', state.nightTheme ? undefined : 'cover-container')}>
+        <header className={cx('container', state.nightTheme || 'cover-container')}>
             <div className={cx('wrapper')}>
                 <Link to='/'>
                     <Image src={images.logo} className={cx('logo')} alt='logo' />
@@ -44,11 +46,11 @@ function Header() {
                         className={cx('switch-btn', state.nightTheme ? 'night-btn' : 'day-btn')}
                         onClick={handleChangeTheme}
                     >
-                        {state.nightTheme && <div className={cx('switch-handler')}></div>}
+                        {state.nightTheme || <div className={cx('switch-handler')}></div>}
                         <div className={cx('switch-inner')}>
                             {state.nightTheme ? <NightIcon /> : <DayIcon />}
                         </div>
-                        {state.nightTheme || <div className={cx('switch-handler')}></div>}
+                        {state.nightTheme && <div className={cx('switch-handler')}></div>}
                     </button>
 
                     <Link to='/signin' className={cx('login-btn')}>
