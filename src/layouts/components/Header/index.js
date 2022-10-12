@@ -21,6 +21,7 @@ import {
     SettingIcon,
     ShareIcon,
 } from '~/components/Icons';
+import Downloader from '~/components/Downloader';
 
 const cx = classNames.bind(styles);
 
@@ -54,6 +55,7 @@ function Header() {
                 <Link to='/'>
                     <Image src={images.logo} className={cx('logo')} alt='logo' />
                 </Link>
+                <Downloader />
                 <div className={cx('actions')}>
                     <Clock />
                     <DayNightSwitch />
