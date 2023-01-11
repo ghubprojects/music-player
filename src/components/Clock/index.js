@@ -25,10 +25,8 @@ function Clock() {
 
     return (
         <div className={cx('wrapper')}>
-            <p>
-                {formatHour(time.getHours())}:{formatMinute(time.getMinutes())}{' '}
-                {period(time.getHours())}
-            </p>
+            {formatHour(time.getHours())}:{formatMinute(time.getMinutes())}
+            {period(time.getHours())}
         </div>
     );
 }

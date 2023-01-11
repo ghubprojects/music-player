@@ -56,7 +56,7 @@ function Header() {
                 <Link to='/'>
                     <Image src={images.logo} className={cx('logo')} alt='logo' />
                 </Link>
-                <Downloader />
+                {/* <Downloader /> */}
                 <div className={cx('actions')}>
                     <Clock />
                     <DayNightSwitch />

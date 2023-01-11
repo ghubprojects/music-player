@@ -1,7 +1,3 @@
 .wrapper {
-    @apply p-1.5 rounded text-white bg-white/[.15];
-
-    p {
-        @apply text-sm font-medium;
-    }
+    @apply p-1.5 rounded text-white bg-white/[.15] text-sm font-medium;
 }
