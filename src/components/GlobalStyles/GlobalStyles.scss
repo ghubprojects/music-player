@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import 'normalize.css';
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap);
 
@@ -7,19 +11,14 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    @apply m-0 p-0 box-border;
 }
 
 html {
-    font-size: 62.5%;
 }
 
 body {
     font-family: var(--default-font);
-    font-size: 1.6rem;
-    line-height: 1.5;
     overflow: hidden;
 }
 
@@ -29,11 +28,9 @@ a {
 
 button,
 input {
-    background: transparent;
-    border: none;
-    outline: none;
+    @apply bg-transparent border-0 outline-0;
 }
 
 button {
-    cursor: pointer;
+    @apply cursor-pointer;
 }

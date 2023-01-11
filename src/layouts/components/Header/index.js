@@ -22,6 +22,7 @@ import {
     ShareIcon,
 } from '~/components/Icons';
 import Downloader from '~/components/Downloader';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -60,9 +61,9 @@ function Header() {
                     <Clock />
                     <DayNightSwitch />
 
-                    <Link to='/signin' className={cx('login-btn')}>
+                    <Button text small className={cx('login-btn')} to='/signin'>
                         Sign up
-                    </Link>
+                    </Button>
 
                     <span className={cx('share-icon')} onClick={handleShowModal}>
                         <ShareIcon />

@@ -1,7 +1,5 @@
 .container {
-    position: fixed;
-    top: 0;
-    width: 100%;
+    @apply fixed top-0 w-full;
 }
 
 .cover-container {
@@ -9,55 +7,30 @@
 }
 
 .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 48px;
+    @apply flex justify-between items-center px-12;
 
     .logo {
-        display: flex;
-        height: 100px;
+        @apply flex h-24;
     }
 
     .actions {
-        display: flex;
-        align-items: center;
-        gap: 28px;
+        @apply flex items-center gap-7;
     }
 }
 
 .login-btn {
-    padding: 5px 16px;
-    border-radius: 8px;
-
+    @apply text-white bg-white/[.25] hover:opacity-60 transition-all duration-200 ease-in-out;
     font-family: var(--default-font);
-    line-height: 22px;
-    font-size: 1.4rem;
-    font-weight: 500;
-
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.25);
-    transition: all 0.3s ease;
-
-    &:hover {
-        opacity: 0.6;
-    }
 }
 
 .share-icon,
 .fullscreen-icon,
 .menu-icon {
-    display: flex;
-    padding: 4px;
-    margin: -4px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-        opacity: 0.4;
-    }
+    @apply flex p-1 -m-1 cursor-pointer hover:opacity-40 transition-all duration-200 ease-in-out;
+    width: 26px;
+    height: 26px;
 }
 
 .menu-icon {
-    position: relative;
+    @apply relative;
 }

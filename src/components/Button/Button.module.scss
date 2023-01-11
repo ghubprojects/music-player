@@ -1,0 +1,55 @@
+.wrapper {
+    @apply flex justify-center items-center space-x-2 font-medium;
+    .string {
+        @apply mt-0.5;
+    }
+}
+
+// Primary Button
+.primary {
+    @apply bg-indigo-600 text-white 
+    /* hover:bg-indigo-700 
+    disabled:bg-indigo-600/[.5] disabled:pointer-events-none */;
+}
+
+// Soft Button
+.soft {
+    @apply bg-indigo-100 text-indigo-600 
+    /* hover:bg-indigo-200 
+    disabled:text-indigo-600/[.5] disabled:pointer-events-none */;
+}
+
+// Outline Button
+.outline {
+    @apply border-2 border-gray-900/[.12] text-gray-900 
+    /* hover:bg-gray-900/[.08]
+    disabled:text-gray-900/[.32] disabled:pointer-events-none */;
+}
+
+// Text Button
+.text {
+    @apply text-gray-900 
+    /* hover:bg-gray-900/[.08]
+    disabled:text-gray-900/[.32] disabled:pointer-events-none */;
+}
+
+// Size of Button
+.large {
+    @apply px-8 py-3.5 text-base rounded-lg flex;
+    .icon {
+        @apply w-5;
+    }
+}
+.medium {
+    @apply px-5 py-2 text-sm rounded-md flex;
+    .icon {
+        @apply w-5;
+    }
+}
+
+.small {
+    @apply px-4 py-1.5 text-sm rounded-md;
+    .icon {
+        @apply w-4;
+    }
+}

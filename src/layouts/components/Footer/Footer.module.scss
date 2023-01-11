@@ -1,34 +1,21 @@
 .container {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    @apply fixed bottom-0 w-full;
 }
 
 .wrapper {
-    padding: 24px;
+    @apply p-6;
 }
 
 .song-title {
-    position: absolute;
-    padding: 15px 8px;
-    color: #fff;
+    @apply absolute px-2 py-4 text-white;
 }
 
 .music-player {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+    @apply flex justify-center items-center gap-4;
 }
 
 .prev-btn,
 .play-btn,
 .next-btn {
-    display: flex;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-        opacity: 0.3;
-    }
+    @apply w-14 flex cursor-pointer transition-all duration-200 ease-in-out hover:opacity-30;
 }

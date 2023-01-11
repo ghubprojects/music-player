@@ -1,4 +1,4 @@
-export const DayIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
+export const DayIcon = ({ width, height }) => (
     <svg
         /* width="15" height="15" */
         width={width}
@@ -14,7 +14,7 @@ export const DayIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
     </svg>
 );
 
-export const NightIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
+export const NightIcon = ({ width, height }) => (
     <svg
         width={width}
         height={height}
@@ -29,7 +29,7 @@ export const NightIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
     </svg>
 );
 
-export const ShareIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
+export const ShareIcon = ({ width, height }) => (
     <svg width={width} height={height} viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
         <path
             d='M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z'
@@ -38,7 +38,7 @@ export const ShareIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
     </svg>
 );
 
-export const FullscreenIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
+export const FullscreenIcon = ({ width, height }) => (
     <svg width={width} height={height} viewBox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'>
         <path
             d='M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z'
@@ -47,7 +47,7 @@ export const FullscreenIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
     </svg>
 );
 
-export const MenuIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
+export const MenuIcon = ({ width, height }) => (
     <svg width={width} height={height} viewBox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'>
         <path
             d='M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z'
@@ -56,12 +56,12 @@ export const MenuIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
     </svg>
 );
 
-export const PlayIcon = ({ width = '5.4rem', height = '5.4rem' }) => (
+export const PlayIcon = ({ width, height }) => (
     <svg
         width={width}
         height={height}
         viewBox='0 0 72 68'
-        fill='none'
+        fill='white'
         xmlns='http://www.w3.org/2000/svg'
     >
         <path
@@ -96,12 +96,12 @@ export const PlayIcon = ({ width = '5.4rem', height = '5.4rem' }) => (
     </svg>
 );
 
-export const StopIcon = ({ width = '5.4rem', height = '5.4rem' }) => (
+export const StopIcon = ({ width, height }) => (
     <svg
         width={width}
         height={height}
         viewBox='0 0 72 68'
-        fill='none'
+        fill='white'
         xmlns='http://www.w3.org/2000/svg'
     >
         <g fill='#fff'>
@@ -118,12 +118,12 @@ export const StopIcon = ({ width = '5.4rem', height = '5.4rem' }) => (
     </svg>
 );
 
-export const PrevIcon = ({ width = '3.6rem', height = '3.6rem' }) => (
+export const PrevIcon = ({ width, height }) => (
     <svg
         width={width}
         height={height}
         viewBox='0 0 37 35'
-        fill='none'
+        fill='white'
         xmlns='http://www.w3.org/2000/svg'
     >
         <path
@@ -132,12 +132,12 @@ export const PrevIcon = ({ width = '3.6rem', height = '3.6rem' }) => (
         />
     </svg>
 );
-export const NextIcon = ({ width = '3.6rem', height = '3.6rem' }) => (
+export const NextIcon = ({ width, height }) => (
     <svg
         width={width}
         height={height}
         viewBox='0 0 36 34'
-        fill='none'
+        fill='white'
         xmlns='http://www.w3.org/2000/svg'
     >
         <path
@@ -147,7 +147,7 @@ export const NextIcon = ({ width = '3.6rem', height = '3.6rem' }) => (
     </svg>
 );
 
-export const CloseIcon = ({ width = '2.2rem', height = '2.2rem' }) => (
+export const CloseIcon = ({ width, height }) => (
     <svg
         width={width}
         height={height}
@@ -162,7 +162,7 @@ export const CloseIcon = ({ width = '2.2rem', height = '2.2rem' }) => (
     </svg>
 );
 
-export const TickIcon = ({ width = '1.8rem', height = '1.8rem' }) => (
+export const TickIcon = ({ width, height }) => (
     <svg width={width} height={height} viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
         <path
             d='M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'

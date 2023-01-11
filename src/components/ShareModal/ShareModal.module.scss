@@ -1,99 +1,54 @@
 .container {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 1000;
+    @apply fixed inset-0 flex justify-center items-center z-50;
 }
 
 .wrapper {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 120px;
+    @apply absolute flex flex-col justify-center items-center
+    mt-32 p-6 rounded-2xl bg-black/[.7];
     width: 440px;
-    padding: 24px;
-    border-radius: 16px;
-
-    background-color: rgb(0, 0, 0, 0.7);
     animation: fade-in 0.4s linear;
 }
 
 .close-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    padding: 4px;
-    cursor: pointer;
+    @apply absolute top-2.5 right-2.5 w-7 h-7 flex p-1 cursor-pointer;
 }
 
 .modal-title {
-    color: white;
-    font-size: 3.2rem;
-    line-height: 3.2rem;
+    @apply text-white text-3xl;
 }
 
 .modal-description {
-    margin: 8px 0;
-    font-size: 1.4rem;
-    color: white;
-    opacity: 0.5;
+    @apply my-2 text-sm text-white opacity-50;
 }
 
 .share-link {
-    display: flex;
-    gap: 10px;
-
-    width: 100%;
-    margin: 8px 0 16px 0;
-    padding: 6px 10px;
-    border-radius: 8px;
-    background: transparent;
+    @apply flex gap-2.5 w-full mt-2 mb-4 px-2.5 py-1.5 rounded-lg bg-transparent;
 
     .link {
-        width: 100%;
+        @apply w-full text-sm text-center text-white;
         font-family: var(--default-font);
-        font-size: 1.3rem;
-        line-height: 1.8rem;
-        text-align: center;
-        color: white;
     }
     .tick-icon {
-        display: flex;
+        @apply w-5 h-5 flex;
     }
 }
 
 .copy-link-success {
-    background-color: rgba(0, 255, 0, 0.5);
+    @apply bg-green-500/[.8];
 }
 
 .copy-btn {
+    @apply px-3 py-2.5 rounded-full text-sm font-semibold;
     min-width: 80px;
-    padding: 10px 12px;
-    border-radius: 999px;
-
     font-family: var(--default-font);
-    font-size: 1.3rem;
-    font-weight: 600;
-
     background-color: var(--color-primary);
 }
 
 @keyframes fade-in {
     0% {
-        opacity: 0;
+        @apply opacity-0;
     }
     98% {
-        opacity: 1;
+        @apply opacity-100;
     }
 }
